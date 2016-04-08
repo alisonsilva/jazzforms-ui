@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>  
+<?import javafx.scene.*?>  
+<?import javafx.scene.control.*?>  
+<?import javafx.scene.layout.*?>  
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.*?>
+
+<VBox fx:id="vboxMenu" xmlns:fx="http://javafx.com/fxml" 
+      fillWidth="true" spacing="5" 
+      stylesheets="br/com/laminarsoft/jazzforms/ui/top/TopArea.css"
+      fx:controller="br.com.laminarsoft.jazzforms.ui.top.TopController">
+           <padding>
+                <Insets top="10" bottom="10" />
+           </padding>
+    <children>
+	    <MenuBar fx:id="menuBar">
+	       <menus>
+	           <Menu text="Projeto" style="width: 50px">
+	               <items>
+	                   <MenuItem text="Novo" onAction="#btnNovo" accelerator="Ctrl+N"/>
+	                   <MenuItem text="Abrir" onAction="#btnCarregar" accelerator="Ctrl+O"/>
+	                   <SeparatorMenuItem />
+	                   <MenuItem text="Salvar" onAction="#btnSalvar" accelerator="Ctrl+S"/>
+	                   <MenuItem text="Publicar" onAction="#btnPublicar" accelerator="Ctrl+P"/>
+	                   <SeparatorMenuItem />
+	                   <MenuItem text="Sair"/>
+	               </items>
+	           </Menu>
+	           <Menu text="Gerência">
+	               <items>
+                       <MenuItem text="Publicações" onAction="#menuGerenciarProjetosAction" accelerator="Ctrl+GP"/>
+	                   <MenuItem text="Usuários" onAction="#menuGerenciarUsuariosAction" accelerator="Ctrl+GU"/>
+	                   <MenuItem text="Processos"/>
+	                   <MenuItem text="Dados" onAction="#menuGerenciarDados" accelerator="Ctrl+GD"/>
+	                   <MenuItem text="Equipamentos" onAction="#menuGerenciarEquipamentos" accelerator="Ctrl+GE" />
+	               </items>
+	           </Menu>
+	       </menus>
+	    </MenuBar>
+	    <GridPane alignment="CENTER_LEFT" hgap="10" vgap="10" fx:id="toolBar" minHeight="30" maxHeight="30">
+           <Button fx:id="btnNewProject" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#btnNovo">
+               <tooltip><Tooltip text="Criar projeto"/></tooltip>
+           </Button>
+           <Button fx:id="btnBarSalvar" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#btnSalvar">
+               <tooltip><Tooltip text="Salvar o projeto"/></tooltip>
+           </Button>
+           <Button fx:id="btnBarPublicar" GridPane.columnIndex="3" GridPane.rowIndex="0" onAction="#btnPublicar">
+               <tooltip><Tooltip text="Salvar o projeto"/></tooltip>
+           </Button>
+           <Button fx:id="btnBarCarregar" GridPane.columnIndex="4" GridPane.rowIndex="0" onAction="#btnCarregar" >
+               <tooltip><Tooltip text="Carrega um projeto"/></tooltip>
+           </Button>           
+           <Button fx:id="btnBarDeletar" GridPane.columnIndex="5" GridPane.rowIndex="0" >
+               <tooltip><Tooltip text="Apaga o projeto"/></tooltip>
+           </Button>           
+	    </GridPane> 
+    </children>
+</VBox>
+

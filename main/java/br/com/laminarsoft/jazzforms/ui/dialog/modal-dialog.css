@@ -1,0 +1,380 @@
+/**
+ * modal-dialog.css
+ * place in same directory as WebViewConfirm.java
+ * ensure your build system copies the file to your build output directory
+ */
+ 
+.root {
+  -fx-glass-color: rgba(95, 158, 160, 0.9);
+}
+ 
+.modal-dialog {
+  -fx-padding: 20;
+  -fx-spacing: 10;
+  -fx-alignment: center;
+  -fx-font-size: 16;
+  -fx-background-color: rgb(101, 101, 101);
+  -fx-border-color: derive(rgb(62,62,62), -20%);
+  -fx-border-width: 5;
+  -fx-background-insets: 12;
+  -fx-border-insets: 10;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+}
+
+.textarea-modal{
+  -fx-font-size: 14;
+  -fx-font: Verdana;
+  -fx-font-family: Verdana;
+  -fx-font-weight: bold;
+  -fx-background-color: rgba(0, 0, 0, 0);
+  -fx-border-width: 0;    
+}
+
+ 
+.modal-dialog:pressed {
+  -fx-cursor: move;
+}
+ 
+.modal-dialog .button:pressed {
+  -fx-cursor: default;
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-style: italic;
+    -fx-font-family: "Courier News";
+    -fx-text-overrun: "clip";
+}
+
+.panel-error-label {
+    -fx-wrap-text: true;
+    -fx-text-alignment: center; 
+}
+
+.btn_confirma {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);    
+}
+
+.btn_cancela {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);    
+}
+
+.btn_edita {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);
+}
+
+.btn_novo {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);   
+}
+
+.btn_anexa {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-image: url("imgs/clip.png");
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+}
+
+.btn_link {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-image: url("imgs/link.png");
+    -fx-background-size: 16 16;     
+    -fx-background-insets: 0 10 0 10;
+}
+
+.btn_refresh_centralizado {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-size: 16 16;
+}
+
+.btn_gps_centralizado {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/gps.png");
+    -fx-background-size: 16 16;
+}
+
+.btn_picture_centralizado {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/camera.png");
+    -fx-background-size: 16 16;
+}
+
+.btn_delete_centralizado {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-size: 16 16;
+}
+
+.btn_edit_centralizado {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-size: 16 16;
+}
+
+
+#gridImagens {
+    -fx-background-color: white;
+}
+
+
+/*
+   Definições de cores e fontes dos componentes
+*/
+
+
+.label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(210, 210, 210);
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: rgb(123, 123, 123);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+.button:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+    -fx-background-color: rgb(123, 123, 123);
+}
+
+.text-area {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-width: 0px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(255, 255, 255);  
+}
+
+.text-area:focused {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;   
+}
+
+.text-area:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+.combo-box {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-width: 0px;
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box .list-cell{
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-width: 0px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12px;
+    -fx-text-fill: rgb(230, 230, 230);  
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: rgb(102, 102, 102);
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}
+
+.combo-box:focused {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+
+.check-box *.box:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+.check-box *.box {
+    -fx-background-color: rgb(123, 123, 123);
+}
+
+.check-box {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12px;
+    -fx-text-fill: rgb(210, 210, 210);
+}
+
+.color-picker {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-width: 0px;
+}
+
+.color-picker:focused {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.color-picker:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+
+.text-field {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-width: 0px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.text-field:focused {
+    -fx-background-color: rgb(123, 123, 123);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.text-field:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+
+.table-view, .list-view {
+    -fx-base: rgb(123, 123, 123); 
+    -fx-control-inner-background: rgb(123, 123, 123); 
+    -fx-cell-hover-color: derive(-fx-control-inner-background, -20%);
+    -fx-background-color: rgb(76, 76,76);
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 2;
+}
+
+.list-view .list-cell {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);  	
+}
+
+.table-view .column-header {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(210, 210, 210);  
+}
+
+.table-view .table-cell {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);  
+}
+
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: rgb(163, 163, 163);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.list-view:focused .list-cell:filled:focused:selected {
+    -fx-background-color: rgb(163, 163, 163);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: rgb(163, 163, 163);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.list-cell:filled:focused:selected {
+    -fx-background-color: rgb(163, 163, 163);
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: rgb(98, 98, 98);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.list-view:row-selection .list-cell:filled:hover {
+    -fx-background-color: rgb(98, 98, 98);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+
+/* Selected row hovered */
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: rgb(98, 98, 98);
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* Selected row hovered when table not focused */
+.table-view:row-selection .table-row-cell:filled:focused:hover {
+    -fx-background-color: rgb(98, 98, 98);
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1, 2 2 3 2, 3 3 4 3;
+    -fx-text-fill: -fx-text-inner-color;
+}
+

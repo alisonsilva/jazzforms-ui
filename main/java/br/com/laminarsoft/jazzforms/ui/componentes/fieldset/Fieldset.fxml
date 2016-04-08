@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+      fx:id="fieldset"
+      fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.fieldset.FieldsetController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/fieldset/Fieldset.css">
+      <top>
+        <HBox alignment="BOTTOM_LEFT">
+      	 <Label text="Field set" alignment="BOTTOM_LEFT" fx:id="lblTitle" />
+      	 </HBox>
+      </top>
+      <bottom>
+        <HBox alignment="TOP_CENTER">
+      	 <Label text="Instruções" alignment="CENTER" fx:id="lblInstructions" />
+      	 </HBox>
+      </bottom>
+</BorderPane>
+

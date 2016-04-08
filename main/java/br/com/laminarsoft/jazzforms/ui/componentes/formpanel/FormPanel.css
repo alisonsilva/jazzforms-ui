@@ -1,0 +1,30 @@
+
+.x-label {    
+  -fx-font-size: 1.6em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+.x-form-panel {
+  -fx-min-height: 2.6em;      
+   -fx-background-color: linear-gradient(#ffffff 0%, #eeeeee 20%, #eeeeee 100%);
+   -fx-background-radius: 5, 5, 5, 5;
+}
+
+.formpanel-centerbox {
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius: 5,5,5,5;
+}
+
+.drag-entered {
+    -fx-border-style: solid;
+    -fx-border-width:  2;   
+    -fx-border-color: rgb(237,52,89);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.drag-exited {
+    -fx-border-width:  0;   
+}

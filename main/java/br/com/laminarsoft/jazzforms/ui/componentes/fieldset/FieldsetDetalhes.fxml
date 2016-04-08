@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.VBox?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+		  fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.fieldset.FieldsetDetalhesController"
+		  stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/fieldset/FieldsetAvancado.css"
+		  alignment="TOP_LEFT"
+		  hgap="10" vgap="10" >
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	
+    <Label  text="Identificação:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="id"/>
+	<Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+	<TextArea fx:id="descricao" prefHeight="100" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="itemId:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="itemId" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label  text="Título:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="txtTitulo"/>
+    <Label  text="Instruções:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="txtInstructions"/>
+</GridPane>
+

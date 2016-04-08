@@ -1,0 +1,25 @@
+.x-toolbar-top {
+  -fx-min-height: 2.6em;      
+   -fx-background-color: linear-gradient(#1e93e4 0%, #1676b9 3%, #11598c 100%);
+   -fx-background-radius: 5, 5, 5, 5;
+}
+
+.x-label {    
+  -fx-font-size: 1.6em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+.drag-entered {
+    -fx-border-style: solid;
+    -fx-border-width:  2;   
+    -fx-border-color: rgb(237,52,89);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.drag-exited {
+    -fx-border-width:  0;   
+}
+

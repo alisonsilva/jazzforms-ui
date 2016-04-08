@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TitledPane?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+
+<StackPane 
+      xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="br.com.laminarsoft.jazzforms.ui.top.dialog.projeto.GerenciarPublicacaoController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/dialog/modal-dialog.css">
+      <styleClass><String fx:value="modal-dialog"/></styleClass>
+    <ProgressIndicator maxWidth="100" maxHeight="100" fx:id="progressIndicator" visible="false"/>
+    <TitledPane  prefHeight="150" maxWidth="250" visible="false" text="Erro na comunicação com o servidor" collapsible="false" fx:id="errorPane" onMouseClicked="#errorPaneClicked">
+        <styleClass><String fx:value="error-label" /></styleClass>
+        <Label maxWidth="200" wrapText="true" text="erro" fx:id="errorLabel">
+            <styleClass><String fx:value="panel-error-label" /></styleClass>
+        </Label>
+    </TitledPane>
+     
+
+    <VBox spacing="10" fx:id="mainPane">
+          <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+          <GridPane hgap="10" vgap="10" prefWidth="800" prefHeight="500">
+                
+              <HBox  spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                 <padding><Insets top="10" right="10" bottom="10" left="20"/></padding>
+                 <TableView fx:id="tableGerenPublicacoes" prefWidth="800" prefHeight="500">
+                    
+                 </TableView>
+              </HBox>
+              <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                 <Button text="Ok" fx:id="btnCancel" cancelButton="true" onAction="#btnCancelaAction" prefWidth="100" prefHeight="25">
+                   <styleClass><String fx:value="btn_confirma"/></styleClass>
+                 </Button>   
+            </HBox>   
+          </GridPane>
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,6 @@
+@CHARSET "ISO-8859-1";
+
+#telaPrincipal{
+    -fx-border-image-width: 3;
+    -fx-background-color: rgb(101, 101, 101);
+}

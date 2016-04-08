@@ -1,0 +1,42 @@
+.focused-style{
+    -fx-border-style: solid;
+    -fx-border-width:  2;   
+    -fx-border-color: rgb(0,0,0);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.unfocused-style {
+    -fx-border-width:  0;   
+}
+
+.fieldset-focused-style {
+    -fx-border-style: solid;
+    -fx-border-width:  2;   
+    -fx-border-color: rgb(0,0,160);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.fieldset-unfocused-style {
+    -fx-border-style: solid;
+    -fx-border-width:  1;   
+    -fx-border-color: rgb(0,0,0);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.line-focused-style {
+    -fx-border-style: solid;
+    -fx-border-width:  1;   
+    -fx-border-color: rgb(0,0,0);
+    -fx-background-color: lightgray ;
+}
+
+.line-unfocused-style {
+    -fx-border-width:  0;   
+    -fx-background-color: white;    
+}
+
+.tab-vbox {
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius: 5,5,5,5;
+}
+

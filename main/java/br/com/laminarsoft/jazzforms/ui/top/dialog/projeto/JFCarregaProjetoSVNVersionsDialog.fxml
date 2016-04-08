@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TitledPane?>
+<?import java.lang.String?>
+<?import javafx.scene.control.TreeView?>
+
+<StackPane 
+      xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="br.com.laminarsoft.jazzforms.ui.top.dialog.projeto.CarregaProjetoSVNController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/dialog/modal-dialog.css">
+      <styleClass><String fx:value="modal-dialog"/></styleClass>
+    <ProgressIndicator maxWidth="100" maxHeight="100" fx:id="progressIndicator" visible="false"/>
+    <TitledPane  prefHeight="150" maxWidth="250" visible="false" text="Erro na comunicação com o servidor"  
+            collapsible="false" fx:id="errorPane" onMouseClicked="#errorPaneClicked">
+        <styleClass><String fx:value="error-label" /></styleClass>
+        <Label maxWidth="200" wrapText="true" text="erro" fx:id="errorLabel">
+            <styleClass><String fx:value="panel-error-label" /></styleClass>
+        </Label>
+    </TitledPane>
+     
+
+	<VBox spacing="10" fx:id="mainPane">
+	      <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+	      <Label text="Escolha a versão que deseja abrir"/>
+	      <ListView prefWidth="300" minWidth="100" prefHeight="200" minHeight="100" fx:id="lvVersoes" />
+	      <HBox spacing="10" alignment="CENTER_RIGHT" >
+	         <padding><Insets top="10" right="10" bottom="10" left="20"/></padding>
+	         <Button text="Cancela" fx:id="btnCancel" cancelButton="true" onAction="#btnCancelaAction" prefWidth="120" prefHeight="25">
+	           <styleClass><String fx:value="btn_cancela"/></styleClass>
+	         </Button>
+	         <Button text="Ok" fx:id="btnOk" onAction="#btnOkAction" prefWidth="120" prefHeight="25">
+               <styleClass><String fx:value="btn_confirma"/></styleClass>
+	         </Button>
+	      </HBox>	
+	</VBox>
+
+</StackPane>

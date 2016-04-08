@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.VBox?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.dataview.DataviewDetalhesController"
+          stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/dataview/DataviewAvancado.css" id="scrollPane">
+<GridPane alignment="TOP_LEFT"
+		  hgap="10" vgap="10" >
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	
+    <Label  text="Identificação:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="id"/>
+	<Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+	<TextArea fx:id="descricao" prefHeight="100" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Item TPL:" GridPane.columnIndex="0" GridPane.rowIndex="2" />    
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="300">
+        <TextField fx:id="txtItemTpl" editable="false" alignment="CENTER_LEFT" prefWidth="170"/>
+        <Button fx:id="editJSTPL" prefWidth="20" prefHeight="20" onAction="#editJSItemTPLAction">
+          <tooltip><Tooltip text="Editar a biblioteca" /></tooltip>
+        </Button> 
+    </HBox>
+    <Label text="Store:" GridPane.columnIndex="0" GridPane.rowIndex="3"  />
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="300">
+	    <TextField fx:id="txtStore" editable="false" alignment="CENTER_LEFT" prefWidth="170"/>
+        <Button fx:id="editJSStore" prefWidth="20" prefHeight="20" onAction="#editJSBibliotecaAction">
+          <tooltip><Tooltip text="Editar a biblioteca" /></tooltip>
+        </Button> 
+    </HBox>
+
+    <Label text="Default type:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="txtDefaultType"/>    
+    <Label text="Objeto:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="txtObjeto"/>
+    <Label text="Texto vazio:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" fx:id="txtEmptyText"/>
+    <Label text="Item class:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" fx:id="txtItemClass"/>
+    <Label text="Texto de carga:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" fx:id="txtDataViewLoadingText"/>
+    <Label text="Cache:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <NumberSpinner GridPane.columnIndex="1" GridPane.rowIndex="9" fx:id="txtMaxItemCache"/>
+    <Label text="View mode:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+    <ComboBox  GridPane.columnIndex="1" GridPane.rowIndex="10" fx:id="cmbViewMode"/>
+    <Label text="Pressed class:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" fx:id="txtDataViewPressedCls"/>
+    <Label text="Selected class:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" fx:id="txtDataViewSelectedCls"/>
+    <Label text="Scroll:" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <ComboBox  GridPane.columnIndex="1" GridPane.rowIndex="13" fx:id="cmbScroll"/>
+    <Label text="Modo de escrita:" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+    <ComboBox  GridPane.columnIndex="1" GridPane.rowIndex="14" fx:id="cmbTplWriteMode"/>
+    <Label text="Trigger event:" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+    <ComboBox  GridPane.columnIndex="1" GridPane.rowIndex="15" fx:id="cmbTriggerEvent"/>
+    <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="16" text="Scroll vertical" fx:id="chkScrollVertical" />
+    <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="17" text="Disabilita seleção" fx:id="chkDisableSelection" />
+    <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="18" text="Usa componentes" fx:id="chkUseComponents" />
+    
+</GridPane>
+</ScrollPane>

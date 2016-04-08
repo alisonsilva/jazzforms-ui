@@ -1,0 +1,350 @@
+@CHARSET "ISO-8859-1";
+
+.split-pane {
+    -fx-border-style: none ;    
+}
+
+#detailsObjects{
+    -fx-border-style: none;
+}
+
+#detailsObjects .tab {
+	-fx-background-color: rgb(62, 62, 62);
+}
+
+#detailsObjects .tab:selected {
+	-fx-background-color: rgb(101, 101, 101);
+}
+
+#detailsObjects .tab-content-area {
+	-fx-background-color: rgb(101, 101, 101);
+}
+
+#detailsObjects .tab *.tab-label {
+	-fx-text-fill: white;
+}
+
+#borderCanvas {
+	-fx-background-color: rgb(153, 153, 153);
+}
+
+
+#sliderWidth{
+	-fx-padding: 10 25 10 25;
+}
+ 
+#sliderHeight{
+	-fx-padding: 25 10 25 10;
+}
+
+#canvasProjeto{
+	-fx-border-style: dotted ;
+	-fx-border-width: 1;
+	-fx-background-color: rgb(101, 101, 101);
+}
+
+#btnConfirma {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;     
+    
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);
+    -fx-background-color: rgb(123, 123, 123);    
+}
+
+#btnCancela {
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat ;
+    -fx-background-size: 16 16;
+    
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12.5px;
+    -fx-text-fill: rgb(210, 210, 210);
+    -fx-background-color: rgb(123, 123, 123);    
+}
+
+
+#btnCancela:hover, #btnConfirma:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+#btnCancela:focused, #btnConfirma:hover {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+    -fx-background-color: rgb(123, 123, 123);
+}
+
+#btnApagaPagina{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/delete.png");
+    -fx-background-size: 16 16;     
+}
+
+#btnNovaPagina{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/nova_pagina.png");
+    -fx-background-size: 16 16;        
+}
+
+#btnBarPaginaAnterior{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/arrowleft.png");
+    -fx-background-size: 16 16;     
+}
+
+#btnBarPaginaPosterior{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/arrowright.png");
+    -fx-background-size: 16 16;
+}
+
+#btnBarArrow{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/cursor_arrow.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnBarComboBox{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/combobox.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnBarRadioButton{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/radiobutton.png");
+    -fx-background-size: 16 16;      
+}
+
+
+#btnBarCheckBox{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/checkbox.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarTextField{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/textfield.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarNumberField {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/number.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarFieldLabel{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/fieldlabel.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarFieldDate{
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/fielddate.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarToggle {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/switch.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarTextArea {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/text_area.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarTable {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/table.png");
+    -fx-background-size: 16 16; 
+}
+
+
+#btnBarGPS {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/gps.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarMAP {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/map.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarPhoto {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/photo.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarChart {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/bar_graph.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarPicture {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/image.png");
+    -fx-background-size: 16 16; 
+}
+
+#btnBarButton {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("imgs/button.png");
+    -fx-background-size: 16 16; 
+}
+
+#toolBar {
+    -fx-background-color: rgb(101, 101, 101);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+
+#btnBarComboLayouts{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-size: 32 32;
+    -fx-background-color: linear-gradient(#d1ccc0, #ada99d);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#btnBarComboContaineres{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-size: 32 32;
+    -fx-background-color: linear-gradient(#d1ccc0, #ada99d);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(210, 210, 210);
+    -fx-font-weight: bold;
+}
+
+.button{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-size: 32 32;
+    -fx-background-color: rgb(153, 153, 153);
+}
+
+.button:hover, #btnBarComboLayouts.hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+.button:focused, #btnBarComboLayouts.focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.menuitem {
+    -fx-min-width: 200;
+    -fx-background-color: rgb(101, 101, 101);
+}
+
+
+.combo-box {
+    -fx-background-color: rgb(153, 153, 153);
+    -fx-border-width: 0px;
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box .list-cell{
+    -fx-background-color: rgb(153, 153, 153);
+    -fx-border-width: 0px;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12px;
+    -fx-text-fill: rgb(230, 230, 230);  
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: rgb(102, 102, 102);
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}
+
+.combo-box:focused {
+    -fx-background-color: rgb(153, 153, 153);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+    -fx-border-color: black lightgray lightgray balck;
+    -fx-border-width: 2px;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius:  6.4, 5, 4, 3;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+
+.pagination {
+    -fx-border-color:  #0E5D79;
+}
+ 
+.pagination .page {
+    -fx-background-color: rgb(101, 101, 101);
+}
+ 
+.pagination .pagination-control {
+    -fx-background-color: rgb(101, 101, 101);
+}
+ 
+.pagination .pagination-control .bullet-button {
+    -fx-background-color: transparent, #DDF1F8, #0E5D79, white, white;
+}
+ 
+.pagination .pagination-control .bullet-button:selected {   
+    -fx-background-color: transparent, #DDF1F8, #0E5D79, white, #0E5D79;
+}
+ 
+.pagination .pagination-control .left-arrow, .right-arrow{
+    -fx-background-color: #DDF1F8, #0E5D79;
+}

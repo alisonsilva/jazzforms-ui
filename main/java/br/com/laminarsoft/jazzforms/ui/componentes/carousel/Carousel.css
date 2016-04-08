@@ -1,0 +1,60 @@
+.x-toolbar-top {
+  -fx-min-height: 2.6em;      
+   -fx-background-color: linear-gradient(#1e93e4 0%, #1676b9 3%, #11598c 100%);
+   -fx-background-radius: 5, 5, 5, 5;
+}
+
+.x-label {    
+  -fx-font-size: 1.6em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+#btnLeft {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/arrow_left.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnRight {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/arrow_right.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnUp {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/arrow_up.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnDown {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/arrow_down.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnRemoveTab {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/button_remove.png");
+    -fx-background-size: 16 16;    
+}
+
+#btnAddTab {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/button_add.png");
+    -fx-background-size: 16 16;    
+}
+
+#fieldset-centerbox {
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius: 5,5,5,5;
+}

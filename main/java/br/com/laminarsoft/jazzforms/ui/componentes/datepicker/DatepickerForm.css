@@ -1,0 +1,24 @@
+.x-button {
+  -fx-border-width: 0;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;      
+}
+
+.x-button-selected {
+   -fx-border-width: 2;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;       
+}
+#formLabel {    
+    -fx-text-fill: #333333;
+    -fx-font-size: 1.0em;
+    -fx-font-weight: bold;
+}
+
+#labelBox {
+    -fx-background-color: #f7f7f7;
+}
+
+#fieldBox {
+    -fx-background-color: #f7f7f7;
+}

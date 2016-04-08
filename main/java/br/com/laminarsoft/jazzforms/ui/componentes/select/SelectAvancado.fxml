@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.Group?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.select.SelectAvancadoController"
+          stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/select/SelectAvancado.css" fx:id="scrollPane">
+<GridPane alignment="TOP_LEFT"  hgap="10" vgap="10" >
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	<HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Biblioteca:" prefWidth="100"/>
+		<TextField fx:id="biblioteca" prefWidth="120" editable="false">
+        	<tooltip><Tooltip text="Seleciona biblioteca a ser utilizada para customização de eventos"/></tooltip>
+		</TextField>
+		<Button fx:id="editJSBiblioteca" onAction="#editJSBibliotecaAction">
+		  <tooltip><Tooltip text="Editar a biblioteca" /></tooltip>
+		</Button> 
+		<Button fx:id="uploadBiblioteca" onAction="#buscaBibliotecaAction" >
+        	<tooltip><Tooltip text="Importa biblioteca com implementção customizada para tratamento de eventos"/></tooltip>
+		</Button>
+	</HBox>
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Estilo:" prefWidth="100"/>
+        <TextField fx:id="estilo" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Seleciona o arquivo de estilo a ser utilizado"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSEstilo" onAction="#editJSEstiloAction">
+          <tooltip><Tooltip text="Editar a biblioteca de estilo" /></tooltip>
+        </Button> 
+        <Button fx:id="uploadEstilo" onAction="#buscaEstiloAction">
+            <tooltip><Tooltip text="Importa biblioteca de estilo com implementção customizada"/></tooltip>
+        </Button>
+    </HBox>
+	<TableView fx:id="tblEventos" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" prefWidth="300" prefHeight="200">
+	</TableView>
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+     	<padding><Insets bottom="20" /></padding>
+        <Button fx:id="btnApaga" onAction="#btnApagaEventoAction" >
+        	<tooltip><Tooltip text="Apaga item selecionado na tabela de eventos"/></tooltip>
+        </Button>
+        <Button fx:id="btnEdita" onAction="#btnEditaAction" >
+            <tooltip><Tooltip text="Edita tratamento de evento customizado"/></tooltip>
+        </Button>
+    </HBox>
+    <Label  text="Classe de estilo:" prefWidth="120" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="classe" prefWidth="100" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <tooltip><Tooltip text="Classe desse container definida no arquivo de estilo"/></tooltip>
+    </TextField>
+    <Label  text="Hidden name:" prefWidth="120" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="txtHiddenName" prefWidth="100" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <tooltip><Tooltip text="Especifica um nome escondido se for utilizar a opção padrão de submissão. Será utilizado para post o valor para o servidor"/></tooltip>
+    </TextField>
+    <Label  text="URL atualização:" prefWidth="120" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="txtStore" prefWidth="100" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <tooltip><Tooltip text="URL que será utilizada para recuperar informações para o campo"/></tooltip>
+    </TextField>
+    <Label  text="Label width (%):" prefWidth="120" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <TextField fx:id="txtLabelWidth" prefWidth="100" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+        <tooltip><Tooltip text="Percentual do cumprimento"/></tooltip>
+    </TextField>  
+</GridPane>
+</ScrollPane>
+

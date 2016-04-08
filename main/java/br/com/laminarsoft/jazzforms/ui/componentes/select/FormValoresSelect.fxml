@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:id="formValores"
+      fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.select.FormValoresSelectController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/dialog/modal-dialog.css" 
+      prefHeight="170"
+      spacing="10">
+      <padding><Insets bottom="10" left="20" right="20" top="20"/></padding>
+      <styleClass><String fx:value="modal-dialog"/></styleClass>
+	<HBox spacing="8" alignment="CENTER_LEFT">
+		<Label text="Texto" prefWidth="80" alignment="CENTER_RIGHT" />
+		<TextField prefWidth="200" promptText="Texto a ser exibido" fx:id="txtTexto"/>
+	</HBox>
+	<HBox spacing="8" alignment="CENTER_LEFT">
+		<Label text="Valor" prefWidth="80" alignment="CENTER_RIGHT"/>
+		<TextField prefWidth="200" promptText="Valor a ser enviado" fx:id="txtValor" onAction="#confirmaAction"/>
+	</HBox>
+	<HBox alignment="CENTER" spacing="8">		
+		<Button text="Cancela" onAction="#cancelaAction" prefWidth="90" >
+		  <styleClass><String fx:value="btn_cancela" /></styleClass>
+		</Button>
+		<Button text="Ok" onAction="#confirmaAction" prefWidth="90">
+          <styleClass><String fx:value="btn_confirma" /></styleClass>
+		</Button>
+	</HBox>
+</VBox>
+

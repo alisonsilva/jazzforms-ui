@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="br.com.laminarsoft.jazzforms.ui.dialog.deploy.JFDeploymentProjetoController"
+          stylesheets="br/com/laminarsoft/jazzforms/ui/dialog/modal-dialog.css"
+          alignment="TOP_LEFT"  hgap="10" vgap="10" >
+    <styleClass><String fx:value="modal-dialog" /></styleClass>          
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+    
+    <Label  text="Id:" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="200" alignment="CENTER_RIGHT"/>
+    <Label  text="Valor id" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="lblId" prefWidth="230"/>
+
+    <Label  text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="200" alignment="CENTER_RIGHT"/>
+    <Label  text="Nome do projeto" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="lblNome" prefWidth="230"/>
+    <Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="2" prefWidth="200" alignment="CENTER_RIGHT"/>
+    <TextArea fx:id="descricaoProjeto" prefHeight="170" prefWidth="230" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="false" wrapText="true"/>
+    
+    <Label  text="Data de criação:" GridPane.columnIndex="0" GridPane.rowIndex="3" fx:id="lblRotDataCriacao" prefWidth="200" wrapText="true" alignment="CENTER_RIGHT"/>
+    <Label  text="Data de criação" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="lblDataCriacao" prefWidth="230"/>
+    
+    <Label  text="Usuário:" GridPane.columnIndex="0" GridPane.rowIndex="4" fx:id="lblRotUsuarioCriacao" prefWidth="200" alignment="CENTER_RIGHT"/>
+    <Label  text="Nome usuário" GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="lblUsuario"  prefWidth="230"/>
+    
+    <HBox spacing="10" alignment="BASELINE_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2">
+        <padding><Insets bottom="20" /></padding>
+        <Button fx:id="btn" onAction="#btnOkAction" text="Ok" prefWidth="100">
+           <styleClass>
+               <String fx:value="btn_confirma" />
+           </styleClass>        
+        </Button>
+    </HBox>
+    
+    
+</GridPane>
+
+

@@ -1,0 +1,33 @@
+.x-toolbar-top {
+  -fx-min-height: 2.6em;      
+   -fx-background-color: linear-gradient(#1e93e4 0%, #1676b9 3%, #11598c 100%);
+   -fx-background-radius: 5, 5, 5, 5;
+}
+
+.x-label {    
+  -fx-font-size: 1.6em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+#fieldset-centerbox {
+    -fx-background-color: rgb(255,255,255);
+    -fx-background-radius: 5,5,5,5;
+}
+
+#lblInstructions{
+    -fx-font-style: italic ;
+    -fx-font-weight: 200;
+}
+
+#lblTitle {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+#lblInstructions {
+    -fx-text-fill: gray;
+    -fx-font-size: 0.8em;
+}

@@ -1,0 +1,29 @@
+.x-button {
+  -fx-border-width: 1;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;      
+}
+
+.x-button-selected {
+   -fx-border-width: 2;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;       
+}
+.x-label {    
+  -fx-font-size: 0.8em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+.drag-entered {
+    -fx-border-style: solid;
+    -fx-border-width:  2;   
+    -fx-border-color: rgb(237,52,89);
+    -fx-border-radius: 5, 5, 5, 5;
+}
+
+.drag-exited {
+    -fx-border-width:  0;   
+}

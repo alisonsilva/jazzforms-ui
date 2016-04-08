@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+        prefHeight="200" 
+        prefWidth="320"
+        fx:id="telaPrincipal"
+        fx:controller="br.com.laminarsoft.jazzforms.ui.JazzFormsController"
+        stylesheets="br/com/laminarsoft/jazzforms/ui/JazzForms.css">
+        <padding>
+            <Insets left="25" right="25" bottom="10"/>
+        </padding>
+
+</BorderPane>
+

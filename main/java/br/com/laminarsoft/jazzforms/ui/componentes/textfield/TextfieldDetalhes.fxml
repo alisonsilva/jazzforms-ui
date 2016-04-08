@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.VBox?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import eu.schudt.javafx.controls.calendar.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.textfield.TextfieldDetalhesController"
+          stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/textfield/TextfieldAvancado.css" id="scrollPane"> 
+<GridPane alignment="TOP_LEFT" hgap="10" vgap="10" >
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	
+    <Label  text="Identificação:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="id" promptText="Identificação única"/>
+	<Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+	<TextArea fx:id="descricao" prefHeight="100" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    
+    <Label  text="Label:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="txtLabel" promptText="Label para o form"/>
+    <Label text="Alinhamento do Label:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <ComboBox editable="false" fx:id="comboAlignLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <CheckBox text="Label wrap" selected="false" fx:id="chkLabelWrap" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <CheckBox text="Obrigatório" selected="false" fx:id="chkObrigatorio" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <CheckBox text="Auto capitalize" selected="false" fx:id="chkAutoCapitalize" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <CheckBox text="Auto complete" selected="false" fx:id="chkAutoComplete" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <CheckBox text="Auto correct" selected="false" fx:id="chkAutoCorrect" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <CheckBox text="Somente leitura" selected="false" fx:id="chkSomenteLeitura" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    <CheckBox text="Text area" selected="false" fx:id="chkTextArea" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+    <CheckBox text="Email field" selected="false" fx:id="chkEmailField" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+    <Label  text="Place holder:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+    <TextField  GridPane.columnIndex="1" GridPane.rowIndex="12" fx:id="txtPlaceHolder" promptText="Texto para place holder"/>
+    <Label text="Comprimento máximo" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+    <NumberSpinner fx:id="maxLength" prefWidth="45" number="0" tooltiptext="Quantidade máxima de caracteres (zero indica sem limite)" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+    <Label text="Quantidade de linhas" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+    <NumberSpinner fx:id="maxLines" prefWidth="45" number="0" tooltiptext="Quantidade máxima de linhas" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+    
+    
+    <Label text="Posição do campo:" GridPane.columnIndex="0" GridPane.rowIndex="15"/>
+    <ComboBox editable="false" fx:id="comboPosicao" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+</GridPane>
+</ScrollPane>

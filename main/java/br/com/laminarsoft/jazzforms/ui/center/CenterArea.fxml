@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>  
+<?import javafx.scene.*?>  
+<?import javafx.scene.control.*?>  
+<?import javafx.scene.layout.*?>  
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.collections.*?>
+
+<SplitPane  xmlns:fx="http://javafx.com/fxml" 
+            fx:id="centerAreaSplit" 
+            orientation="HORIZONTAL"
+            focusTraversable="true"
+            stylesheets="br/com/laminarsoft/jazzforms/ui/center/CenterArea.css"
+            fx:controller="br.com.laminarsoft.jazzforms.ui.center.CenterController">
+    <items>
+        <BorderPane fx:id="borderDetails" minHeight="0" minWidth="0">
+            <center>
+	           <TabPane  fx:id="detailsObjects" minHeight="0" minWidth="0" SplitPane.resizableWithParent="true">
+	                <tabs>
+	                    <Tab text="Detalhes" closable="false" fx:id="detailsObjectsTab"/>
+	                    <Tab text="Avançado" closable="false" fx:id="avancadoObjectsTab"/>
+	                </tabs>       
+	           </TabPane>
+            </center>
+            <bottom>
+			    <HBox spacing="10" alignment="CENTER" style="-fx-background-color: rgb(101, 101, 101);">
+			     <padding><Insets bottom="20" /></padding>
+			         <Button fx:id="btnCancela" text="Cancela" onAction="#btnCancelaAction" prefWidth="100" textAlignment="LEFT"/>
+			         <Button fx:id="btnConfirma" text="Confirma" onAction="#btnConfirmaAction" prefWidth="100" textAlignment="LEFT"/>
+			    </HBox>
+            </bottom>        
+        </BorderPane>
+       <BorderPane fx:id="borderCanvas" minHeight="0" minWidth="0" SplitPane.resizableWithParent="true" >
+            <top>
+                <HBox spacing="10" fx:id="topPaginacao">
+                    <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+                    <Button fx:id="btnNovaPagina" onAction="#novaPaginaAction">
+                       <tooltip><Tooltip text="Nova página nesta posição"/></tooltip>
+                    </Button>
+		           <Button fx:id="btnApagaPagina" onAction="#apagaPaginaAction">
+		               <tooltip><Tooltip text="Apaga a página atual"/></tooltip>
+		           </Button>         
+		           <Button fx:id="btnBarArrow" onAction="#btnBarArrow" >
+		               <tooltip><Tooltip text="Arranjo"/></tooltip>
+		           </Button>                    
+		           <Button fx:id="btnBarComboBox" onAction="#btnBarComboBox">
+		               <tooltip><Tooltip text="Combo box"/></tooltip>
+		           </Button>
+		           <Button fx:id="btnBarRadioButton" onAction="#btnRadioButton" >
+		               <tooltip><Tooltip text="Botão de rádio"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarCheckBox" onAction="#btnBarCheckBox">
+		               <tooltip><Tooltip text="Botão de checagem"/></tooltip>
+		           </Button>           
+		           <Button fx:id="btnBarButton" onAction="#btnBarButton">
+		               <tooltip><Tooltip text="Botão de ação"/></tooltip>
+		           </Button>           
+		           <Button fx:id="btnBarTextField" onAction="#btnBarTextField">
+		               <tooltip><Tooltip text="Campo de texto"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarNumberField" onAction="#btnBarNumberField">
+		               <tooltip><Tooltip text="Campo numérico"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarFieldLabel" onAction="#btnBarLabel" >
+		               <tooltip><Tooltip text="Label"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarFieldDate" onAction="#btnBarCampoData">
+		               <tooltip><Tooltip text="Campo data"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarToggle" onAction="#btnBarToggle">
+		               <tooltip><Tooltip text="Campo toggle"/></tooltip>
+		           </Button> 
+		           <Button fx:id="btnBarTextArea" onAction="#btnTextArea" >
+		               <tooltip><Tooltip text="Área de texto"/></tooltip>               
+		           </Button> 
+		           <Button fx:id="btnBarTable" >
+		               <tooltip><Tooltip text="Tabela"/></tooltip>
+		           </Button>           
+		           <Button fx:id="btnBarGPS" onAction="#btnGps">
+		               <tooltip><Tooltip text="Recuperação de posicionamento"/></tooltip>
+		           </Button>            
+		           <Button fx:id="btnBarMAP" >
+		               <tooltip><Tooltip text="Criar campo de exibição de mapa"/></tooltip>
+		           </Button>
+		           
+		           <Button fx:id="btnBarPhoto" onAction="#btnPhoto" >
+		               <tooltip><Tooltip text="Criar campo de retirada de fotos"/></tooltip>
+		           </Button>
+		           <Button fx:id="btnBarChart" onAction="#btnChart">
+		               <tooltip><Tooltip text="Criar campo de exibição de gráficos"/></tooltip>
+		           </Button>
+		           <Button fx:id="btnBarPicture" onAction="#btnPicture">
+		               <tooltip><Tooltip text="Criar campo de exibição de imagem"/></tooltip>
+		           </Button>
+		           
+		           
+		          <ComboBox fx:id="btnBarComboContaineres"  
+		                    prefWidth="110"
+		                    promptText="Container"
+		                    onAction="#btnBarComboContaineres">
+		                <items>
+		                    <FXCollections fx:factory="observableArrayList">
+		                         <Label text="Container"/>
+		                        <Label text="Form panel">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/formpanel.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>
+		                        <Label text="Picker">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/picker.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>     
+		                       <Label text="Field set">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/fieldset.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>                                           
+		                        <Label text="Message box">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/messagebox.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>     
+		                        <Label text="Action sheet">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/actionsheet.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>     
+		                        <Separator/>
+		                        <Label text="Tool bar">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/toolbar.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Title bar">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/titlebar.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>    
+		                        <Label text="Tab panel">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/tabpanel.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Navigation view">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/navigationview.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Carousel">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/carousel.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>
+		                        <Separator/>
+		                        <Label text="List view">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/listview.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Data view">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/dataview.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Nested list">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/nestedlist.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>      
+		                        <Label text="Mapa">
+		                            <graphic> 
+		                              <StackPane prefWidth="32">
+		                                <ImageView fitHeight="16" preserveRatio="true">
+		                                  <image>
+		                                    <Image url="@imgs/map.png" preserveRatio="false" smooth="false" />
+		                                  </image>
+		                                </ImageView>
+		                              </StackPane>  
+		                            </graphic>  
+		                        </Label>                           
+		                    </FXCollections>                    
+		                </items>
+		           </ComboBox>   		             
+                </HBox>                
+            </top>
+       		<bottom>
+       			<Slider fx:id="sliderWidth" orientation="HORIZONTAL" min="0" max="100" value="100" />
+       		</bottom>
+       		<right>
+       			<Slider fx:id="sliderHeight" orientation="VERTICAL" min="0" max="100" value="90"/>
+       		</right>
+       </BorderPane>
+    </items>
+</SplitPane>
+

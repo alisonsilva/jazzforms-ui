@@ -1,0 +1,32 @@
+.x-button {
+  -fx-border-width: 1;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;      
+}
+
+.x-button-selected {
+   -fx-border-width: 2;
+  -fx-border-radius: 3;
+  -fx-border-color: black ;       
+}
+.x-label {    
+  -fx-font-size: 0.8em;
+  -fx-font-weight: bold;
+  -fx-max-width: 100%;
+  -fx-padding: 0 0.3em;  
+  -fx-text-fill: white;
+}
+
+.x-toggle-on {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/ToggleOn.png");
+    -fx-background-size: 27 94;    
+}
+
+.x-toggle-on {
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch;
+    -fx-background-image: url("../imgs/ToggleOff.png");
+    -fx-background-size: 27 94;    
+}

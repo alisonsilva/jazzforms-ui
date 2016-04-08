@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+      fx:id="textfieldPane"
+      fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.toggle.ToggleController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/toggle/Toggle.css" prefHeight="30" prefWidth="97">
+</BorderPane>
+

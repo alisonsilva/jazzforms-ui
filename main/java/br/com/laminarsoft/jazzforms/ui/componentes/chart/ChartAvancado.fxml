@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.Group?>
+<?import br.com.laminarsoft.jazzforms.ui.componentes.numbertextfield.NumberSpinner?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.chart.ChartAvancadoController"
+          stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/chart/ChartAvancado.css" fx:id="scrollPane">
+<GridPane alignment="TOP_LEFT"  hgap="10" vgap="10" >
+	<padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	
+	<HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Biblioteca:" prefWidth="100"/>
+		<TextField fx:id="biblioteca" prefWidth="120" editable="false">
+        	<tooltip><Tooltip text="Seleciona biblioteca a ser utilizada para customização de eventos"/></tooltip>
+		</TextField>
+		<Button fx:id="editJSBiblioteca" onAction="#editJSBibliotecaAction">
+		  <tooltip><Tooltip text="Editar a biblioteca" /></tooltip>
+		</Button> 
+		<Button fx:id="uploadBiblioteca" onAction="#buscaBibliotecaAction" >
+        	<tooltip><Tooltip text="Importa biblioteca com implementção customizada para tratamento de eventos"/></tooltip>
+		</Button>
+	</HBox>
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Estilo:" prefWidth="100"/>
+        <TextField fx:id="estilo" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Seleciona o arquivo de estilo a ser utilizado"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSEstilo" onAction="#editJSEstiloAction">
+          <tooltip><Tooltip text="Editar a biblioteca de estilo" /></tooltip>
+        </Button> 
+        <Button fx:id="uploadEstilo" onAction="#buscaEstiloAction">
+            <tooltip><Tooltip text="Importa biblioteca de estilo com implementção customizada"/></tooltip>
+        </Button>
+    </HBox>
+	<TableView fx:id="tblEventos" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2" prefWidth="300" prefHeight="200">
+	</TableView>
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+     	<padding><Insets bottom="20" /></padding>
+        <Button fx:id="btnApaga" onAction="#btnApagaEventoAction" >
+        	<tooltip><Tooltip text="Apaga item selecionado na tabela de eventos"/></tooltip>
+        </Button>
+        <Button fx:id="btnEdita" onAction="#btnEditaAction" >
+            <tooltip><Tooltip text="Edita tratamento de evento customizado"/></tooltip>
+        </Button>
+    </HBox>
+    
+    <Label  text="Classe de estilo:" prefWidth="120" GridPane.columnIndex="0" GridPane.rowIndex="4"/>    
+    <TextField fx:id="classe" prefWidth="100" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <tooltip><Tooltip text="Classe desse container definida no arquivo de estilo"/></tooltip>
+    </TextField>
+    
+    
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Store:" prefWidth="100"/>
+        <TextField fx:id="store" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Escreva a definição do data store para o gráfico"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSStore" prefWidth="20" prefHeight="20" onAction="#editJSStoreAction">
+          <tooltip><Tooltip text="Editar o data store" /></tooltip>
+        </Button> 
+    </HBox>	
+
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Eixos:" prefWidth="100"/>
+        <TextField fx:id="axes" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Escreva definição dos eixos"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSAxes" prefWidth="20" prefHeight="20" onAction="#editJSAxesAction">
+          <tooltip><Tooltip text="Editar os eixos" /></tooltip>
+        </Button> 
+    </HBox> 
+
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="8" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Series:" prefWidth="100"/>
+        <TextField fx:id="series" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Defina quais serão as séries a serem exibidas no gráfico"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSSeries" prefWidth="20" prefHeight="20" onAction="#editJSSeriesAction">
+          <tooltip><Tooltip text="Editar as séries" /></tooltip>
+        </Button> 
+    </HBox> 
+
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Legenda:" prefWidth="100"/>
+        <TextField fx:id="legenda" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Defina como será a legenda"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSLegenda" prefWidth="20" prefHeight="20" onAction="#editJSLegendaAction">
+          <tooltip><Tooltip text="Editar a legenda" /></tooltip>
+        </Button> 
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="10" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Interações:" prefWidth="100"/>
+        <TextField fx:id="interactions" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Defina como serão as interações"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSInteractions" prefWidth="20" prefHeight="20" onAction="#editJSInteractionsAction">
+          <tooltip><Tooltip text="Editar as séries" /></tooltip>
+        </Button> 
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="11" GridPane.columnSpan="2" maxWidth="300">
+        <Label  text="Cores:" prefWidth="100"/>
+        <TextField fx:id="cores" prefWidth="120" editable="false">
+            <tooltip><Tooltip text="Defina quais serão as cores do polar"/></tooltip>
+        </TextField>
+        <Button fx:id="editJSCores" prefWidth="20" prefHeight="20" onAction="#editJSCoresAction">
+          <tooltip><Tooltip text="Editar as séries" /></tooltip>
+        </Button> 
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="12" GridPane.columnSpan="2" maxWidth="300">
+	    <Label  text="URL:" prefWidth="100"/>    
+	    <TextField fx:id="urlAtualizacao" prefWidth="160" alignment="CENTER_LEFT" >
+	        <tooltip><Tooltip text="Escreva a url do serviço de atualização dos valores das séries do gráfico"/></tooltip>
+	    </TextField>    
+    </HBox>    
+
+</GridPane>
+</ScrollPane>
+

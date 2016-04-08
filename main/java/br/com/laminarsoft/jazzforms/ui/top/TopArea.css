@@ -1,0 +1,143 @@
+@CHARSET "ISO-8859-1";
+
+#btnNewProject {
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+	-fx-background-size: 16 16;
+	-fx-text-fill: rgb(210, 210, 210);
+}
+
+#btnBarSalvar {
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+	-fx-background-size: 16 16;
+}
+
+#btnBarPublicar {
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+	-fx-background-size: 16 16;
+}
+
+#btnBarCarregar {
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+	-fx-background-size: 16 16;
+}
+
+#btnBarDeletar {
+	-fx-background-position: center center;
+	-fx-background-repeat: stretch;
+	-fx-background-size: 16 16;
+}
+
+
+#toolBar {
+	-fx-background-color: rgb(101, 101, 101);
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+#btnBarComboContaineres {
+	-fx-text-fill: white;
+	-fx-font-family: "Arial Narrow";
+	-fx-size: 32 32;
+	-fx-background-color: linear-gradient(#d1ccc0, #ada99d);
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 12px;
+    -fx-text-fill: rgb(210, 210, 210);
+}
+
+.button {
+	-fx-text-fill: white;
+	-fx-color: white;
+	-fx-font-family: "Arial Narrow";
+	-fx-font-weight: bold;
+	-fx-size: 32 32;
+	-fx-background-color: rgb(101, 101, 101);
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.button:focused {
+	-fx-color: -fx-focused-base;
+	-fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+	-fx-background-insets: -1.4, 0, 1, 2;
+	-fx-background-radius: 6.4, 5, 4, 3;
+}
+
+.button:hover {
+	-fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+
+.menu {
+	/* -fx-skin: "com.sun.javafx.scene.control.skin.MenuItemSkin";*/
+    -fx-background-color: rgb(101, 101, 101);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+	-fx-padding: 0.333333em 0.41777em 0.333333em 0.41777em; /* 4 5 4 5 */
+}
+
+.menu .left-container {
+	-fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+
+.menu .label {
+	-fx-text-fill: white;
+    -fx-background-color: rgb(101, 101, 101);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+.menu:focused {
+    -fx-background-color: rgb(95, 95, 95);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+	-fx-text-fill: white;
+}
+
+.menu .label:hover {
+    -fx-background-color: linear-gradient(#ada99d, #d1ccc0);
+}
+
+.menu:focused .label {
+	-fx-text-fill: white;
+    -fx-background-color: rgb(101, 101, 101);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+
+root {
+  -fx-background-color: cornsilk; 
+  -fx-padding: 10;
+}
+
+.context-menu {
+  -fx-background-color: #C8CFD7;
+  -fx-border-color: #BBC2CC;
+  -fx-text-fill: white;
+}
+
+
+.menu-item .label {
+  -fx-fill:red;
+    -fx-font-family:tahoma;
+    -fx-font-size: 12px;
+    -fx-stroke:#C8CFD7;
+    -fx-strok-width:.25;
+}
+
+.menu-item:focused .label {
+  -fx-text-fill: white;
+}
+.menu-item{
+    -fx-border-color: #DDDEE2 transparent #B9C0C8 transparent;
+
+    -fx-border-width:0.50px;
+
+}
+.menu-item:focused {
+     -fx-background: -fx-accent;
+     -fx-background-color: #7092BE;
+     -fx-text-fill: -fx-selection-bar-text;
+}

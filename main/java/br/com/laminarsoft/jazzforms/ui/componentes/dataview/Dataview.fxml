@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+      fx:id="dataView"
+      fx:controller="br.com.laminarsoft.jazzforms.ui.componentes.dataview.DataviewController"
+      stylesheets="br/com/laminarsoft/jazzforms/ui/componentes/dataview/Dataview.css"
+      prefHeight="800">
+      <top>
+        <HBox alignment="BOTTOM_LEFT">
+      	 <Label text="Data view" alignment="BOTTOM_LEFT" fx:id="lblTitle" />
+      	 </HBox>
+      </top>
+      <bottom>
+        <HBox alignment="TOP_CENTER">
+      	 <Label text="Exibição de dados recuperados de uma fonte de dades" alignment="CENTER" fx:id="lblInstructions" />
+      	 </HBox>
+      </bottom>
+</BorderPane>
+
